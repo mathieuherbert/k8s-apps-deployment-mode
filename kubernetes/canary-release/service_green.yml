@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: grid-green
+spec:
+  selector:
+    app: grid-green
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080

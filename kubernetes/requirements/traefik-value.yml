@@ -1,0 +1,12 @@
+rbac:
+  enabled: true
+dashboard:
+  enabled: true
+  domain: traefik.k8s
+kubernetes:
+  namespaces:
+    - app
+    - default
+    - kube-system
+accessLogs:
+  enabled: true

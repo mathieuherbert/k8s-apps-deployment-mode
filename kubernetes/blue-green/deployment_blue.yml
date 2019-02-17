@@ -1,0 +1,26 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grid-blue
+  labels:
+    app: grid-blue
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: grid-blue
+  template:
+    metadata:
+      labels:
+        app: grid-blue
+    spec:
+      containers:
+      - name: app
+        image: breizhcamp:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+        env:
+        - name: COLOR
+          value: "#64b5f6"        

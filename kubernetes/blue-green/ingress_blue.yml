@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: grid
+spec:
+  rules:
+  - host: breizhcamp.tes
+    http:
+      paths:
+       - backend:
+          serviceName: grid-blue
+          servicePort: 80
